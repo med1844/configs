@@ -121,9 +121,9 @@ fi
 
 export STARSHIP_CONFIG=~/.config/starship.toml
 
-export PATH=/home/medioqrity/.local/bin:$PATH
+export PATH=~/.local/bin/:$PATH
 
-alias python=python3.7
+alias python=python3
 alias pip=pip3
 
 exec zsh

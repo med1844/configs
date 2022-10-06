@@ -9,7 +9,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/medioqrity/.oh-my-zsh"
+export ZSH="/home/med/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -111,18 +111,20 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-eval "$(starship init zsh)"
+export PATH=~/.local/bin/:$PATH
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 eval $(thefuck --alias)
 
 powerline-daemon -q
-. /home/medioqrity/.local/lib/python3.8/site-packages/powerline/bindings/zsh/powerline.zsh
+. /home/med/.local/lib/python3.8/site-packages/powerline/bindings/zsh/powerline.zsh
 source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 bindkey -v
 
-alias python=python3.7
+alias python=python3
 alias pip=pip3
+
+eval "$(starship init zsh)"
 
