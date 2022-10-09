@@ -106,17 +106,10 @@ let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyz'
 
 let g:airline_theme = 'wombat'
 let g:airline_powerline_fonts = 1
-
-let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/youcompleteme/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
-
-" nerd tree settings
-" let NERDTreeCustomOpenArgs={'file':{'where': 't'}}
-
-" autocmd VimEnter * NERDTree | wincmd p
-" autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
-" autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
+let g:airline#extensions#tabline#enabled = 1
 
 map <Space> <Plug>(easymotion-prefix)
 
 let g:AutoPairsMapCR = 0
+let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 
