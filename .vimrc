@@ -127,4 +127,9 @@ map <Space> <Plug>(easymotion-prefix)
 
 let g:AutoPairsMapCR = 0
 " let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+"
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
+inoremap <expr> <CR> pumvisible() ? asyncomplete#close_popup() . "\<CR>" : "\<CR>"
 
