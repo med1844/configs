@@ -88,6 +88,8 @@ Plugin 'mattn/vim-lsp-settings'
 Plugin 'prabirshrestha/asyncomplete.vim'
 Plugin 'prabirshrestha/asyncomplete-lsp.vim'
 
+let g:lsp_diagnostics_echo_cursor = 1
+
 " nerdtrees
 " Plugin 'preservim/nerdtree'
 " Plugin 'Xuyuanp/nerdtree-git-plugin'
