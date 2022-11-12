@@ -28,8 +28,8 @@ set laststatus=2
 " set colorcolumn=80
 " highlight ColorColumn ctermbg=0 guibg=lightgrey
 
-let mapleader = ","
-let g:mapleader = ","
+" let mapleader = ","
+" let g:mapleader = ","
 
 nnoremap <leader>v <C-w>v<C-w>l
 nnoremap <leader>s <C-w>s
@@ -76,13 +76,13 @@ Plugin 'easymotion/vim-easymotion'
 " Plugin 'ycm-core/youcompleteme'
 
 " auto completers
-Plugin 'Shougo/deoplete.nvim'
-Plugin 'roxma/nvim-yarp'
-Plugin 'roxma/vim-hug-neovim-rpc'
-let g:deoplete#enable_at_startup = 1
-inoremap <silent><expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-inoremap <silent><expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
-let g:clang_library_path='/usr/lib/llvm-10/lib/libclang-10.so.1'
+" Plugin 'Shougo/deoplete.nvim'
+" Plugin 'roxma/nvim-yarp'
+" Plugin 'roxma/vim-hug-neovim-rpc'
+" let g:deoplete#enable_at_startup = 1
+" inoremap <silent><expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+" inoremap <silent><expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
+" let g:clang_library_path='/usr/lib/llvm-10/lib/libclang-10.so.1'
 
 " nerdtrees
 " Plugin 'preservim/nerdtree'
