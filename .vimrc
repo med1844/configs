@@ -40,6 +40,8 @@ nnoremap <C-l> <C-w>l
 
 set ttimeoutlen=2
 
+set langmap=mh,nj,ek,il,hm,jn,ke,li,MH,NJ,EK,IL,HM,JN,KE,LI
+
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
@@ -71,7 +73,16 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'easymotion/vim-easymotion'
 
 " ycm
-Plugin 'ycm-core/youcompleteme'
+" Plugin 'ycm-core/youcompleteme'
+
+" auto completers
+Plugin 'Shougo/deoplete.nvim'
+Plugin 'roxma/nvim-yarp'
+Plugin 'roxma/vim-hug-neovim-rpc'
+let g:deoplete#enable_at_startup = 1
+inoremap <silent><expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+inoremap <silent><expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
+let g:clang_library_path='/usr/lib/llvm-10/lib/libclang-10.so.1'
 
 " nerdtrees
 " Plugin 'preservim/nerdtree'
@@ -111,5 +122,5 @@ let g:airline#extensions#tabline#enabled = 1
 map <Space> <Plug>(easymotion-prefix)
 
 let g:AutoPairsMapCR = 0
-let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+" let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 
