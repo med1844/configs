@@ -40,7 +40,7 @@ nnoremap <C-l> <C-w>l
 
 set ttimeoutlen=2
 
-set langmap=mh,nj,ek,il,hm,jn,ke,li,MH,NJ,EK,IL,HM,JN,KE,LI
+" set langmap=mh,nj,ek,il,hm,jn,ke,li,MH,NJ,EK,IL,HM,JN,KE,LI
 
 filetype off                  " required
 
@@ -83,6 +83,10 @@ Plugin 'easymotion/vim-easymotion'
 " inoremap <silent><expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 " inoremap <silent><expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
 " let g:clang_library_path='/usr/lib/llvm-10/lib/libclang-10.so.1'
+Plugin 'prabirshrestha/vim-lsp'
+Plugin 'mattn/vim-lsp-settings'
+Plugin 'prabirshrestha/asyncomplete.vim'
+Plugin 'prabirshrestha/asyncomplete-lsp.vim'
 
 " nerdtrees
 " Plugin 'preservim/nerdtree'
