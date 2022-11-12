@@ -11,4 +11,5 @@ curl -sS https://starship.rs/install.sh | sh
 sudo apt install tmux
 sudo apt install tree
 sudo apt install tldr
+sudo apt install build-essential
 
