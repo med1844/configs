@@ -18,4 +18,5 @@ sudo apt install tree
 sudo apt install tldr
 sudo apt install build-essential
 sudo apt install unzip
+sudo apt install ripgrep
 

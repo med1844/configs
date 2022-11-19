@@ -3,6 +3,9 @@ set nu rnu
 set ts=4 expandtab sw=4
 set so=6
 set hidden
+set nowrap
+
+set mouse=a " for mouse trackpad scrolling
 
 " python3 from powerline.vim import setup as powerline_setup
 " python3 powerline_setup()
@@ -135,3 +138,9 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
 inoremap <expr> <CR> pumvisible() ? asyncomplete#close_popup() . "\<CR>" : "\<CR>"
 
+" config builtin netrw
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 20
