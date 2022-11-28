@@ -126,6 +126,5 @@ export PATH=~/.local/bin/:$PATH
 alias python=python3
 alias pip=pip3
 
-sudo ntpdate ntp.ubuntu.com &>/dev/null &
-
 exec zsh
+. "$HOME/.cargo/env"
