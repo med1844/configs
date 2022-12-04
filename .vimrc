@@ -3,6 +3,9 @@ set nu rnu
 set ts=4 expandtab sw=4
 set so=6
 set hidden
+set nowrap
+
+set mouse=a " for mouse trackpad scrolling
 
 " python3 from powerline.vim import setup as powerline_setup
 " python3 powerline_setup()
@@ -39,8 +42,6 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 set ttimeoutlen=2
-
-" set langmap=mh,nj,ek,il,hm,jn,ke,li,MH,NJ,EK,IL,HM,JN,KE,LI
 
 filetype off                  " required
 
@@ -88,6 +89,8 @@ Plugin 'mattn/vim-lsp-settings'
 Plugin 'prabirshrestha/asyncomplete.vim'
 Plugin 'prabirshrestha/asyncomplete-lsp.vim'
 
+let g:lsp_diagnostics_echo_cursor = 1
+
 " nerdtrees
 " Plugin 'preservim/nerdtree'
 " Plugin 'Xuyuanp/nerdtree-git-plugin'
@@ -99,6 +102,9 @@ Plugin 'vim-airline/vim-airline-themes'
 " syntax highlight
 Plugin 'sheerun/vim-polyglot'
 Plugin 'vim-syntastic/syntastic'
+
+" colemak
+Plugin 'beardedfoo/vim-colemak'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -133,3 +139,9 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
 inoremap <expr> <CR> pumvisible() ? asyncomplete#close_popup() . "\<CR>" : "\<CR>"
 
+" config builtin netrw
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 20
