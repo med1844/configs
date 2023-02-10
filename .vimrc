@@ -36,12 +36,45 @@ set laststatus=2
 
 nnoremap <leader>v <C-w>v<C-w>l
 nnoremap <leader>s <C-w>s
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+nnoremap <C-m> <C-w>h
+nnoremap <C-n> <C-w>j
+nnoremap <C-e> <C-w>k
+nnoremap <C-i> <C-w>l
 
 set ttimeoutlen=2
+
+nnoremap m h
+vnoremap m h
+nnoremap n j
+vnoremap n j
+nnoremap e k
+vnoremap e k
+nnoremap i l
+vnoremap i l
+nnoremap h m
+vnoremap h m
+nnoremap j n
+vnoremap j n
+nnoremap k e
+vnoremap k e
+nnoremap l i
+vnoremap l i
+nnoremap M H
+vnoremap M H
+nnoremap N J
+vnoremap N J
+nnoremap E K
+vnoremap E K
+nnoremap I L
+vnoremap I L
+nnoremap H M
+vnoremap H M
+nnoremap J N
+vnoremap J N
+nnoremap K E
+vnoremap K E
+nnoremap L I
+vnoremap L I
 
 filetype off                  " required
 
@@ -103,9 +136,6 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'vim-syntastic/syntastic'
 
-" colemak
-Plugin 'beardedfoo/vim-colemak'
-
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -123,7 +153,7 @@ filetype plugin indent on    " required
 "
 "
 let g:EasyMotion_smartcase = 1
-let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyz'
+let g:EasyMotion_keys = 'arstneioqwfpluyzxcgmbjvkdh'
 
 let g:airline_theme = 'wombat'
 let g:airline_powerline_fonts = 1
@@ -132,8 +162,6 @@ let g:airline#extensions#tabline#enabled = 1
 map <Space> <Plug>(easymotion-prefix)
 
 let g:AutoPairsMapCR = 0
-" let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
-"
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
