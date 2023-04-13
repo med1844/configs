@@ -80,7 +80,7 @@ plugins=(
   thefuck
 )
 
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -113,18 +113,40 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH=~/.local/bin/:$PATH
 
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/antigen.zsh
 
-eval $(thefuck --alias)
+# Load the oh-my-zsh's library.
+antigen use oh-my-zsh
+
+# Bundles from the default repo (robbyrussell's oh-my-zsh).
+antigen bundle git
+antigen bundle heroku
+antigen bundle pip
+antigen bundle lein
+antigen bundle command-not-found
+
+# syntax highlighting bundle.
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+# Tell Antigen that you're done.
+antigen apply
+
+eval $(thefuck --alias --enable-experimental-instant-mode)
 
 powerline-daemon -q
-. /home/med/.local/lib/python3.8/site-packages/powerline/bindings/zsh/powerline.zsh
-source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 bindkey -v
 
 alias python=python3
 alias pip=pip3
+
+# export PYENV_ROOT="$HOME/.pyenv"
+# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init -)"
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}"  ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh"  ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 eval "$(starship init zsh)"
 
