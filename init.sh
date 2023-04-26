@@ -15,12 +15,13 @@ sudo apt update
 sudo apt install zsh
 source ~/.zsh/antigen.zsh
 
+git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+cd ~/.pyenv && src/configure && make -C src
+cd ~
+
 curl -sS https://starship.rs/install.sh | sh
 
-sudo apt install tmux
-sudo apt install tree
-sudo apt install tldr
-sudo apt install build-essential
-sudo apt install unzip
-sudo apt install ripgrep
+sudo apt install tmux tree tldr build-essential unzip ripgrep \
+  libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev curl \
+  libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
 
