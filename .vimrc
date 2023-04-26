@@ -36,45 +36,12 @@ set laststatus=2
 
 nnoremap <leader>v <C-w>v<C-w>l
 nnoremap <leader>s <C-w>s
-nnoremap <C-m> <C-w>h
-nnoremap <C-n> <C-w>j
-nnoremap <C-e> <C-w>k
-nnoremap <C-i> <C-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 set ttimeoutlen=2
-
-nnoremap m h
-vnoremap m h
-nnoremap n j
-vnoremap n j
-nnoremap e k
-vnoremap e k
-nnoremap i l
-vnoremap i l
-nnoremap h m
-vnoremap h m
-nnoremap j n
-vnoremap j n
-nnoremap k e
-vnoremap k e
-nnoremap l i
-vnoremap l i
-nnoremap M H
-vnoremap M H
-nnoremap N J
-vnoremap N J
-nnoremap E K
-vnoremap E K
-nnoremap I L
-vnoremap I L
-nnoremap H M
-vnoremap H M
-nnoremap J N
-vnoremap J N
-nnoremap K E
-vnoremap K E
-nnoremap L I
-vnoremap L I
 
 filetype off                  " required
 
