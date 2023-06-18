@@ -4,6 +4,9 @@ sudo apt update
 sudo apt install fish
 sudo apt install neovim
 
+# setup fish
+fish_config theme choose "ayu Dark"
+
 # setup prompt (starship)
 curl -sS https://starship.rs/install.sh | sh
 echo "starship init fish | source" >> ~/.config/fish/config.fish
