@@ -20,4 +20,17 @@ return {
     end,
   },
   "petobens/poet-v",
+  {
+    "rebelot/kanagawa.nvim",
+    lazy = false,
+    config = function()
+      require("kanagawa").setup({
+        compile = true,
+        background = {
+          dark = "wave",
+          light = "lotus"
+        },
+      })
+    end,
+  }
 }

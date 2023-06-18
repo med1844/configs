@@ -10,6 +10,9 @@ fish_config theme choose "ayu Dark"
 # setup prompt (starship)
 curl -sS https://starship.rs/install.sh | sh
 echo "starship init fish | source" >> ~/.config/fish/config.fish
+echo "alias vim=nvim" >> ~/.config/fish/config.fish
+echo "alias python=python3" >> ~/.config/fish/config.fish
+echo "alias pip=pip3" >> ~/.config/fish/config.fish
 
 # setup neovim configuration
 git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
@@ -29,6 +32,9 @@ cd ~
 curl -sSL https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 python3 get-pip.py
 rm get-pip.py
+
+# setup tmux plugin manager
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm  # make sure prefix-I after installation
 
 # copy all config files to HOME
 cp .* ~
