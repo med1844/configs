@@ -1,3 +1,6 @@
+# install rust via rustup
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
 # install shell & editor
 sudo apt-add-repository ppa:fish-shell/release-3
 sudo apt update
@@ -7,13 +10,10 @@ sudo apt install neovim
 # setup fish
 fish_config theme choose "ayu Dark"
 set -U fish_user_paths ~/.local/bin $fish_user_paths
+set -U fish_user_paths $HOME/.cargo/bin $fish_user_paths
 
 # setup prompt (starship)
 curl -sS https://starship.rs/install.sh | sh
-echo "starship init fish | source" >> ~/.config/fish/config.fish
-echo "alias vim=nvim" >> ~/.config/fish/config.fish
-echo "alias python=python3" >> ~/.config/fish/config.fish
-echo "alias pip=pip3" >> ~/.config/fish/config.fish
 
 # setup neovim configuration
 git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
@@ -37,6 +37,6 @@ rm get-pip.py
 # setup tmux plugin manager
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm  # make sure prefix-I after installation
 
-# copy all config files to HOME
-cp .* ~
+# copy all config files to their expected location
+python3 sync.py
 
