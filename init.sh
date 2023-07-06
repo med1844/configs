@@ -7,6 +7,9 @@ sudo apt update
 sudo apt install fish
 sudo apt install neovim
 
+# update ls to exa
+sudo apt install exa
+
 # setup fish
 # fish_config theme choose "ayu Dark"
 # set -U fish_user_paths ~/.local/bin $fish_user_paths
