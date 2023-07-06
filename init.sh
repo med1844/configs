@@ -1,11 +1,13 @@
 # install rust via rustup
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
-# install shell & editor
-sudo apt-add-repository ppa:fish-shell/release-3
+# install shell
+sudo add-apt-repository ppa:fish-shell/release-3
 sudo apt update
 sudo apt install fish
-sudo apt install neovim
+
+# install neovim >= 0.8
+sudo snap install --beta nvim --classic
 
 # update ls to exa
 sudo apt install exa
