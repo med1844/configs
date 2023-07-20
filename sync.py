@@ -7,7 +7,6 @@ home = os.path.expanduser("~")
 
 
 tracked_filenames = [
-    (".bashrc", home),
     (".gdbinit", home),
     (".gitconfig", home),
     (".tmux.conf", home),
