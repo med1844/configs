@@ -12,7 +12,9 @@ zellij setup --generate-completion fish >~/.config/fish/completions/zellij.fish
 sudo apt-add-repository ppa:fish-shell/release-3
 sudo apt update
 sudo apt install fish
-sudo apt install neovim
+
+# install neovim >= 0.8
+sudo snap install --beta nvim --classic
 
 # setup fisher, a fish shell plugin manager
 curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
