@@ -67,7 +67,7 @@ keybinds clear-defaults=true {
     // }
     scroll {
         bind "Ctrl s" { SwitchToMode "Normal"; }
-        // bind "v" { EditScrollback; SwitchToMode "Normal"; }
+        bind "v" { EditScrollback; SwitchToMode "Normal"; }
         bind "/" { SwitchToMode "EnterSearch"; SearchInput 0; }
         bind "Ctrl c" { ScrollToBottom; SwitchToMode "Normal"; }
         bind "n" "Down" { ScrollDown; }
@@ -151,8 +151,8 @@ keybinds clear-defaults=true {
         bind "9" { GoToTab 9; SwitchToMode "Normal"; }
     }
     shared_except "locked" {
-        bind "Ctrl g" { SwitchToMode "Locked"; }
-        bind "Ctrl q" { Quit; }
+        /* bind "Ctrl g" { SwitchToMode "Locked"; } */
+        /* bind "Ctrl q" { Quit; } */
         bind "Alt n" { NewPane; }
         bind "Alt m" "Alt Left" { MoveFocusOrTab "Left"; }
         bind "Alt i" "Alt Right" { MoveFocusOrTab "Right"; }
