@@ -5,7 +5,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 cargo install zellij ripgrep bat
 
 # setup zellij
-ln -s ./zellij ~/.config/zellij
+ln -s $(pwd)/zellij ~/.config/zellij
 zellij setup --generate-completion fish >~/.config/fish/completions/zellij.fish
 
 # install neovim >= 0.8
