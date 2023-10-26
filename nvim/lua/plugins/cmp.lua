@@ -15,7 +15,6 @@ return {
       end
 
       local cmp = require("cmp")
-      local luasnip = require("luasnip")
       cmp.setup({
         mapping = {
           ["<Tab>"] = cmp.mapping(function(fallback)
