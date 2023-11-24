@@ -1,0 +1,8 @@
+[language-server]
+pyright = { command = "pyright-langserver", args = ["--stdio"], config = {} }
+
+[[language]]
+name = "python"
+auto-format = true
+roots = ["pyprojects.toml"]
+language-servers = [ "pyright" ]

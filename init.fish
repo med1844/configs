@@ -31,6 +31,9 @@ curl -sS https://starship.rs/install.sh | sh
 # setup neovim configuration
 ln -s $(pwd)/nvim ~/.config/nvim
 
+# setup helix config
+ln -s $(pwd)/helix ~/.config/helix
+
 # install libraries that will be used during pyenv installing python from source
 sudo apt install tree tldr build-essential unzip \
     libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev curl \
