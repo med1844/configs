@@ -29,6 +29,12 @@ esc = ["collapse_selection", "keep_primary_selection"]
 c = ["yank_main_selection_to_clipboard", "change_selection"]
 y = "yank_main_selection_to_clipboard"
 N = "join_selections"
+ret = "jump_view_left"
+"C-n" = "jump_view_down"
+"C-e" = "jump_view_up"
+tab = "jump_view_right"
+"C-l" = "jump_forward"
+"C-p" = "jump_backward"
 
 [keys.normal.d]
 d = ["extend_to_line_bounds", "yank_main_selection_to_clipboard", "delete_selection"]
@@ -48,17 +54,6 @@ g = { g = ["select_mode", "extend_to_line_bounds", "goto_file_start", "extend_to
 [keys.insert]
 # Escape the madness! No more fighting with the cursor! Or with multiple cursors!
 esc = ["collapse_selection", "normal_mode"]
-
-[editor]
-line-number = "relative"
-color-modes = true
-cursorline = true
-true-color = true
-
-[editor.cursor-shape]
-insert = "bar"
-normal = "block"
-select = "block"
 
 [keys.select]
 # movement
@@ -96,6 +91,36 @@ P = "paste_clipboard_before"
 # Escape the madness! No more fighting with the cursor! Or with multiple cursors!
 esc = ["collapse_selection", "keep_primary_selection", "normal_mode"]
 
+[keys.normal.space.w]
+m = "jump_view_left"
+n = "jump_view_down"
+e = "jump_view_up"
+i = "jump_view_right"
+M = "swap_view_left"
+N = "swap_view_down"
+E = "swap_view_up"
+I = "swap_view_right"
+
+[editor]
+line-number = "relative"
+color-modes = true
+cursorline = true
+true-color = true
+rulers = [120]
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "block"
+
+[editor.indent-guides]
+render = true
+character = "╎"
+skip-levels = 0
+
 [editor.lsp]
 display-inlay-hints = true
 display-messages = true
+
+[editor.statusline]
+right = ["position", "file-encoding", "file-type"]
