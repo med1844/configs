@@ -2,7 +2,7 @@
 	email = medioqrity@gmail.com
 	name = med
 [core]
-	editor = vim
+	editor = hx
 [alias]
 	lol = log --graph --decorate --pretty=oneline --abbrev-commit
 	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
