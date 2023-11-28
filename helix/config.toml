@@ -19,7 +19,7 @@ G = "goto_file_end"
 "%" = "match_brackets"
 V = ["select_mode", "extend_to_line_bounds"]
 S = "surround_add"
-x = "delete_selection"
+x = ["yank_main_selection_to_clipboard", "delete_selection"]
 p = ["paste_clipboard_after", "collapse_selection"]
 P = ["paste_clipboard_before", "collapse_selection"]
 a = ["append_mode", "collapse_selection"]
@@ -36,20 +36,20 @@ tab = "jump_view_right"
 "C-l" = "jump_forward"
 "C-p" = "jump_backward"
 
-[keys.normal.d]
-d = ["extend_to_line_bounds", "yank_main_selection_to_clipboard", "delete_selection"]
-t = ["extend_till_char"]
-s = ["surround_delete"]
-i = ["select_textobject_inner"]
-a = ["select_textobject_around"]
-n = ["select_mode", "extend_to_line_bounds", "extend_line_below", "yank_main_selection_to_clipboard", "delete_selection", "normal_mode"]
-down = ["select_mode", "extend_to_line_bounds", "extend_line_below", "yank_main_selection_to_clipboard", "delete_selection", "normal_mode"]
-e = ["select_mode", "extend_to_line_bounds", "extend_line_above", "yank_main_selection_to_clipboard", "delete_selection", "normal_mode"]
-up = ["select_mode", "extend_to_line_bounds", "extend_line_above", "yank_main_selection_to_clipboard", "delete_selection", "normal_mode"]
-G = ["select_mode", "extend_to_line_bounds", "goto_last_line", "extend_to_line_bounds", "yank_main_selection_to_clipboard", "delete_selection", "normal_mode"]
-w = ["move_next_word_start", "yank_main_selection_to_clipboard", "delete_selection"]
-W = ["move_next_long_word_start", "yank_main_selection_to_clipboard", "delete_selection"]
-g = { g = ["select_mode", "extend_to_line_bounds", "goto_file_start", "extend_to_line_bounds", "yank_main_selection_to_clipboard", "delete_selection", "normal_mode"] }
+# [keys.normal.d]
+# d = ["extend_to_line_bounds", "yank_main_selection_to_clipboard", "delete_selection"]
+# t = ["extend_till_char"]
+# s = ["surround_delete"]
+# i = ["select_textobject_inner"]
+# a = ["select_textobject_around"]
+# n = ["select_mode", "extend_to_line_bounds", "extend_line_below", "yank_main_selection_to_clipboard", "delete_selection", "normal_mode"]
+# down = ["select_mode", "extend_to_line_bounds", "extend_line_below", "yank_main_selection_to_clipboard", "delete_selection", "normal_mode"]
+# e = ["select_mode", "extend_to_line_bounds", "extend_line_above", "yank_main_selection_to_clipboard", "delete_selection", "normal_mode"]
+# up = ["select_mode", "extend_to_line_bounds", "extend_line_above", "yank_main_selection_to_clipboard", "delete_selection", "normal_mode"]
+# G = ["select_mode", "extend_to_line_bounds", "goto_last_line", "extend_to_line_bounds", "yank_main_selection_to_clipboard", "delete_selection", "normal_mode"]
+# w = ["move_next_word_start", "yank_main_selection_to_clipboard", "delete_selection"]
+# W = ["move_next_long_word_start", "yank_main_selection_to_clipboard", "delete_selection"]
+# g = { g = ["select_mode", "extend_to_line_bounds", "goto_file_start", "extend_to_line_bounds", "yank_main_selection_to_clipboard", "delete_selection", "normal_mode"] }
 
 [keys.insert]
 # Escape the madness! No more fighting with the cursor! Or with multiple cursors!
