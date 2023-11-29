@@ -107,6 +107,7 @@ color-modes = true
 cursorline = true
 true-color = true
 rulers = [120]
+idle-timeout = 0
 
 [editor.cursor-shape]
 insert = "bar"
@@ -115,7 +116,6 @@ select = "block"
 
 [editor.indent-guides]
 render = true
-character = "╎"
 skip-levels = 0
 
 [editor.lsp]
