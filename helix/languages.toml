@@ -1,9 +1,9 @@
 [language-server]
 pyright = { command = "pyright-langserver", args = ["--stdio"], config = {} }
-ruff = { command = "ruff-lsp", config = { settings = { run = "onSave" } } }
 
 [[language]]
 name = "python"
+formatter = { command = "ruff", args = ["format", "-"] }
 auto-format = true
 roots = ["pyprojects.toml"]
-language-servers = [ "pyright", "ruff" ]
+language-servers = [ "pyright" ]
