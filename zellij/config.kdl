@@ -158,6 +158,10 @@ keybinds clear-defaults=true {
         bind "Alt i" "Alt Right" { MoveFocusOrTab "Right"; }
         bind "Alt n" "Alt Down" { MoveFocus "Down"; }
         bind "Alt e" "Alt Up" { MoveFocus "Up"; }
+        bind "Alt Left" { MovePane "Left"; }
+        bind "Alt Down" { MovePane "Down"; }
+        bind "Alt Up" { MovePane "Up"; }
+        bind "Alt Right" { MovePane "Right"; }
         bind "Alt =" "Alt +" { Resize "Increase"; }
         bind "Alt -" { Resize "Decrease"; }
         bind "Alt [" { PreviousSwapLayout; }
