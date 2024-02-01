@@ -22,7 +22,7 @@ chsh -s $(which fish)
 
 # these commands must be executed in the fish shell... have no idea how to
 fish_config theme choose "ayu Dark"
-set -U fish_user_paths ~/.local/bin $fish_user_paths
+set -U fish_user_paths $HOME/.local/bin $fish_user_paths
 set -U fish_user_paths $HOME/.cargo/bin $fish_user_paths
 
 # setup prompt (starship)
