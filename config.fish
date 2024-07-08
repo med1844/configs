@@ -21,6 +21,7 @@ if status is-interactive
 
     source ~/.bash_aliases
     starship init fish | source
+    zoxide init fish | source
 end
 
 
