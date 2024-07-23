@@ -2,7 +2,7 @@
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # now install things via cargo install
-cargo install zellij ripgrep bat eza
+cargo install zellij ripgrep bat eza zoxide
 
 # setup zellij
 ln -s $(pwd)/zellij ~/.config/zellij
@@ -40,3 +40,6 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 # copy all config files to their expected location
 python3 $(pwd)/sync.py
+
+# install fzf
+sudo apt install fzf
