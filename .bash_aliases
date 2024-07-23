@@ -1,6 +1,9 @@
-alias vim=nvim
 alias python=python3
 alias pip=pip3
 alias ls=eza
 alias cat=bat
 alias zel=zellij
+alias ga="git add"
+alias gc="git commit"
+alias gp="git push"
+alias gd="git diff HEAD"
