@@ -7,3 +7,7 @@ formatter = { command = "ruff", args = ["format", "-"] }
 auto-format = true
 roots = ["pyprojects.toml"]
 language-servers = [ "pyright" ]
+
+[[language]]
+name = "cpp"
+auto-format = true
