@@ -11,6 +11,9 @@ zellij setup --generate-completion fish >~/.config/fish/completions/zellij.fish
 # setup fisher, a fish shell plugin manager
 curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
 
+# install nvm plugin
+fisher install jorgebucaran/nvm.fish
+
 # install bass
 fisher install edc/bass
 

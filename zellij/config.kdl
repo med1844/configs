@@ -7,19 +7,19 @@ keybinds clear-defaults=true {
     // locked {
     //     bind "Ctrl g" { SwitchToMode "Normal"; }
     // }
-    // resize {
-    //     bind "Ctrl n" { SwitchToMode "Normal"; }
-    //     bind "m" "Left" { Resize "Increase Left"; }
-    //     bind "n" "Down" { Resize "Increase Down"; }
-    //     bind "e" "Up" { Resize "Increase Up"; }
-    //     bind "i" "Right" { Resize "Increase Right"; }
-    //     bind "M" { Resize "Decrease Left"; }
-    //     bind "N" { Resize "Decrease Down"; }
-    //     bind "E" { Resize "Decrease Up"; }
-    //     bind "I" { Resize "Decrease Right"; }
-    //     bind "=" "+" { Resize "Increase"; }
-    //     bind "-" { Resize "Decrease"; }
-    // }
+    resize {
+        bind "Esc" "q" { SwitchToMode "Normal"; }
+        // bind "m" "Left" { Resize "Increase Left"; }
+        // bind "n" "Down" { Resize "Increase Down"; }
+        // bind "e" "Up" { Resize "Increase Up"; }
+        // bind "i" "Right" { Resize "Increase Right"; }
+        // bind "M" { Resize "Decrease Left"; }
+        // bind "N" { Resize "Decrease Down"; }
+        // bind "E" { Resize "Decrease Up"; }
+        // bind "I" { Resize "Decrease Right"; }
+        // bind "=" "+" { Resize "Increase"; }
+        // bind "-" { Resize "Decrease"; }
+    }
     // pane {
     //     bind "Ctrl p" { SwitchToMode "Normal"; }
     //     bind "m" "Left" { MoveFocus "Left"; }
@@ -100,21 +100,9 @@ keybinds clear-defaults=true {
         bind "Ctrl c" "Esc" { SwitchToMode "Scroll"; }
         bind "Enter" { SwitchToMode "Search"; }
     }
-    // renametab {
-    //     bind "Ctrl c" { SwitchToMode "Normal"; }
-    //     bind "Esc" { UndoRenameTab; SwitchToMode "Tab"; }
-    // }
-    // renamepane {
-    //     bind "Ctrl c" { SwitchToMode "Normal"; }
-    //     bind "Esc" { UndoRenamePane; SwitchToMode "Pane"; }
-    // }
-    // session {
-    //     bind "Ctrl o" { SwitchToMode "Normal"; }
-    //     bind "Ctrl s" { SwitchToMode "Scroll"; }
-    //     bind "d" { Detach; }
-    // }
     tmux {
         bind "[" { SwitchToMode "Scroll"; }
+        bind "v" { SwitchToMode "Scroll"; EditScrollback; SwitchToMode "Normal"; }
         bind "Ctrl b" { Write 2; SwitchToMode "Normal"; }
         bind "-" { NewPane "Down"; SwitchToMode "Normal"; }
         bind "|" { NewPane "Right"; SwitchToMode "Normal"; }
@@ -127,10 +115,10 @@ keybinds clear-defaults=true {
         bind "Right" { MoveFocus "Right"; SwitchToMode "Normal"; }
         bind "Down" { MoveFocus "Down"; SwitchToMode "Normal"; }
         bind "Up" { MoveFocus "Up"; SwitchToMode "Normal"; }
-        bind "m" { Resize "Increase Left"; SwitchToMode "Normal"; }
-        bind "n" { Resize "Increase Down"; SwitchToMode "Normal"; }
-        bind "e" { Resize "Increase Up"; SwitchToMode "Normal"; }
-        bind "i" { Resize "Increase Right"; SwitchToMode "Normal"; }
+        bind "m" { Resize "Increase Left"; }
+        bind "n" { Resize "Increase Down"; }
+        bind "e" { Resize "Increase Up"; }
+        bind "i" { Resize "Increase Right"; }
         bind "o" { FocusNextPane; }
         bind "d" { Detach; }
         bind "Space" { NextSwapLayout; }
