@@ -9,13 +9,12 @@ if status is-interactive
     set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME
     set -gx PATH $HOME/.cabal/bin /home/med/.ghcup/bin $PATH # ghcup-env
 
-    # nvm
-    if test -d "$HOME/.nvm"
-        export NVM_DIR="$HOME/.nvm"
-        bass source "$NVM_DIR/nvm.sh"
+    # >>> conda initialize >>>
+    # !! Contents within this block are managed by 'conda init' !!
+    if test -f $HOME/miniforge3/bin/conda
+        eval $HOME/miniforge3/bin/conda "shell.fish" hook $argv | source
     end
-
-    source "$HOME/.cargo/env.fish"
+    # <<< conda initialize <<<
 
     source ~/.bash_aliases
     starship init fish | source

@@ -11,7 +11,8 @@ tracked_filenames = [
     (".gitconfig", home),
     (".tmux.conf", home),
     (".bash_aliases", home),
-    ("config.fish", os.path.join(home, ".config/fish"))
+    ("config.fish", os.path.join(home, ".config/fish")),
+    ("starship.toml", os.path.join(home, ".config")),
 ]
 
 for filename, src_folder in tracked_filenames:
@@ -35,11 +36,12 @@ for filename, src_folder in tracked_filenames:
     else:
         in_repo_mtime = os.path.getmtime(in_repo_filename)
         home_mtime = os.path.getmtime(home_filename)
-        if in_repo_mtime != home_mtime and not filecmp.cmp(in_repo_filename, home_filename):
+        if in_repo_mtime != home_mtime and not filecmp.cmp(
+            in_repo_filename, home_filename
+        ):
             src = in_repo_filename if in_repo_mtime > home_mtime else home_filename
             dst = home_filename if in_repo_mtime > home_mtime else in_repo_filename
             shutil.copyfile(src, dst)
             print("replaced %s with %s" % (dst, src))
         else:
             print("no change")
-
